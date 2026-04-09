@@ -235,8 +235,97 @@ footer {
     font-size: 0.8rem;
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
     .hero, .celebrate, .send-box { flex-direction: column; text-align: center; }
     .giving-grid, .share-grid, .new-grid, .footer-grid { grid-template-columns: 1fr; }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; 
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-img img {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin: 50px 0 30px;
+    }
+
+    .giving-grid, 
+    .share-grid, 
+    .new-grid, 
+    .footer-grid {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+    }
+
+    .celebrate {
+        flex-direction: column-reverse; 
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .celebrate-img img {
+        max-width: 300px;
+    }
+
+    .send-box {
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .input-group {
+        flex-direction: column;
+        background: transparent;
+        gap: 10px;
+    }
+
+    .input-group input {
+        width: 100%;
+        border-radius: 50px;
+    }
+
+    .send-img img {
+        width: 180px;
+        margin-top: 30px;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .btn-main {
+        width: 100%;
+    }
 }
