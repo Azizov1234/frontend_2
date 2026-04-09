@@ -1,0 +1,242 @@
+:root {
+    --main-color: #dc3845;
+    --text-color: #393939;
+    --light-text: #707070;
+    --white: #ffffff;
+    --bg-light: #f9f9f9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 25px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.active { color: var(--main-color); }
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 0;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: var(--light-text);
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    background: var(--main-color);
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero-img img { width: 100%; max-width: 500px; }
+
+/* Giving */
+.title {
+    text-align: center;
+    margin: 80px 0 50px;
+    font-size: 2rem;
+}
+
+.giving-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.giving-card img { width: 100px; margin-bottom: 20px; }
+
+/* Celebrate */
+.celebrate {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 100px 0;
+}
+
+.celebrate-img img { width: 100%; max-width: 450px; }
+
+/* Share Gift Cards */
+.share-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.gift-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.gift-card img { width: 100px; margin-bottom: 20px; }
+
+.heart {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: var(--main-color);
+}
+
+/* New Gifts Red Cards */
+.new-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.new-card {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.new-card img { width: 120px; margin-bottom: 20px; }
+
+.cart-btn {
+    background: var(--main-color);
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Send Message Box */
+.send {
+    padding: 100px 0;
+}
+
+.send-box {
+    background: var(--main-color);
+    padding: 60px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.input-group {
+    background: white;
+    padding: 8px;
+    border-radius: 50px;
+    display: flex;
+    margin-top: 30px;
+}
+
+.input-group input {
+    border: none;
+    padding: 10px 20px;
+    flex: 1;
+    border-radius: 50px;
+    outline: none;
+}
+
+.input-group button {
+    background: #222;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.send-img img { width: 250px; }
+
+footer {
+    padding: 80px 0 30px;
+    background: var(--bg-light);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-col h3, .footer-col h4 { margin-bottom: 20px; }
+
+.footer-col ul { list-style: none; }
+
+.footer-col ul li {
+    margin-bottom: 10px;
+    color: var(--light-text);
+}
+
+.copy {
+    text-align: center;
+    color: var(--light-text);
+    font-size: 0.8rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .hero, .celebrate, .send-box { flex-direction: column; text-align: center; }
+    .giving-grid, .share-grid, .new-grid, .footer-grid { grid-template-columns: 1fr; }
+}
